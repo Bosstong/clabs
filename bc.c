@@ -1,5 +1,5 @@
 #include<stdio.h>
-main()
+int main()
 {
     int count = 1;
     int number = 0;
@@ -14,4 +14,5 @@ main()
         count++;
     }
     printf("the amount is:%d\n", count);
+    return 0;
 }

@@ -10,7 +10,7 @@ int strindex (char s[], char t[])
     }
     }
     if(pos >0)
-    return pos;
+    return pos+1;
     return -1;
 }
 main(){

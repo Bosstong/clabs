@@ -35,6 +35,8 @@ int main()
                 sum+=(number1[i]-'0')*power(16,gen-i);
             else if(number1[i]>='A'&&number1[i]<='F')
                 sum+=(number1[i]-'A'+10)*power(16,gen-i);
+            else if(number1[i]>='a'&&number1[i]<='f')
+            sum+=(number1[i]+'A'-'a'-'A'+10)*power(16,gen-i);
             else{
                 printf("input error\n");
                 return 0;

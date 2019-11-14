@@ -28,7 +28,7 @@ int main()
             printf("input error\n");
             return 0;
         }
-
+i--；
     while(i > 1)
     {
             if(number1[i]<='9'&&number1[i]>='0')

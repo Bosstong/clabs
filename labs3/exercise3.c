@@ -28,7 +28,8 @@ int main()
             printf("input error\n");
             return 0;
         }
-    while(i > 1)
+        i--;
+        while(i > 1)
     {
             if(number1[i]<='9'&&number1[i]>='0')
                 sum+=(number1[i]-'0')*power(16,gen-i);

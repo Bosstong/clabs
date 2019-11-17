@@ -50,5 +50,5 @@ int main()
     printf("the max is %u,your input number  is too big\n",b-1);
     }
     else printf("%d\n",sum);
-    return 0;
+    return 0 ;
 }

@@ -11,5 +11,5 @@ int main(){
         ih--;
     }
     printf("the time interval is%d hours %d minutes\n",ih,im);
-    return 0;
+    return 0 ;
 }

@@ -6,5 +6,5 @@ while(a!=0){
     a=a<<1;
     count++;
 }
-printf("the max is %llu,the min is %llu the sizeof if %d\n",a-1,a+1,count);   
+printf("the max is %llu,the min is %llu the sizeof if %d\n",a-1,a,count);   
 }

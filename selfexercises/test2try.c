@@ -17,7 +17,6 @@ int main(void)
         a = a * 10 + m[p] - '0';
         p++;
     }
-    printf("a is %u\n",a);
     while (1)
     {
         n[q] = getchar();
@@ -28,7 +27,6 @@ int main(void)
         b = b * 10 + n[q] - '0';
         q++;
     }
-    printf("b is %u\n",b);
     c = getchar();
     j = getchar();
     if (j == '\n')
@@ -36,19 +34,19 @@ int main(void)
         switch (c)
         {
         case '+':
-            printf("%d", a + b);
+            printf("%.1lf", a + b);
             break;
         case '-':
-            printf("%d", a - b);
+            printf("%.1lf", a - b);
             break;
         case '*':
-            printf("%d", a * b);
+            printf("%.1lf", a * b);
             break;
         case '/':
             if (b == 0)
                 printf("Error: cannot divide a number by 0！");
             else
-                printf("%f", a * 1.0 / b);
+                printf("%.1f", a * 1.0 / b);
             break;
         default:
             break;

@@ -32,7 +32,7 @@ main(){
 			if ((int)op2 == op2  && (int)op3 == op3 && op2 != 0 )
 				push((int)op3%(int)op2);
 			else
-				printf("error----------\n");
+				printf("error\n");
 			break;
             case'/':
             op2 = pop();

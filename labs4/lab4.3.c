@@ -30,7 +30,23 @@ main(){
 			op2 = pop();
 			op3 = pop();
 			if ((int)op2 == op2  && (int)op3 == op3 && op2 != 0 )
-				push((int)op3%(int)op2);
+				{
+                if((int)op2>0 &&(int)op3>0)
+                {push((int)op3%(int)op2);}
+                if((int)op2<0 && (int)op3<0)
+                {op2=op2*(-1);
+                op3=op3*(-1);
+                push((int)op3%(int)op2);}
+                if((int)op2>0 && (int)op3<0){
+                op3=op3*(-1);
+                push((int)op3%(int)op2);  
+                }
+                if((int)op2<0 && (int)op3>0){
+                op2=op2*(-1);
+                push((int)op3%(int)op2);    
+                }
+                }
+
 			else
 				printf("error\n");
 			break;

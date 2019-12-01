@@ -50,8 +50,6 @@ main(){
             push(op2);
             push(op2);
             break;
-            case'e':
-            sp=0;
             break;
             case's':
             op1=pop();

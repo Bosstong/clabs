@@ -10,7 +10,6 @@ main(){
     int type;
     double op1;
     double op2;
-    double op3;
     char s[MAXOP];
     while((type = getop(s))!=EOF){
         switch (type){
@@ -28,16 +27,21 @@ main(){
             push(pop()-op2);
             break;
             case '%':
-			op2 = pop();
-			op3 = pop();
-			if ((int)op2 == op2  && (int)op3 == op3 && op2 != 0 )
-				{
-                push((int)op3%(int)op2);}
-
-			else
-				printf("error\n");
-			break;
-            case'p':op2 = pop();
+            op1 = pop();
+            op2 = pop();
+            if (op1 != (int)op1 || op2 != (int)op2)
+                printf("error\n");
+            else if (op1 == 0)
+                printf("error: zero divisor\n");
+            else if (op2 < 0)
+            push((int)op2 % (int)op1);
+            else if (op1 < 0)
+            push((int)op2 % (int)op1);
+            else
+                push((int)op2 % (int)op1);
+            break;
+            case'p':
+            op2 = pop();
             printf("\t%.8g\n",op2);
             push(op2);
             break;
@@ -45,6 +49,9 @@ main(){
             op2 = pop();
             push(op2);
             push(op2);
+            break;
+            case'e':
+            sp=0;
             break;
             case's':
             op1=pop();

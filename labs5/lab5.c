@@ -9,7 +9,7 @@ int getch(void )
 void ungetch(int c)
 {
     if(bufp >= 100)
-        printf("yichu");
+        printf("full");
     else
         buf[bufp--] = c;
 }

@@ -7,7 +7,6 @@ int getop(char s[]);
 void push(double);
 double pop(void);
 char s[MAXOP];
-char t[MAXOP];
 main(int argc, char *argv[])
 {
     int type;
@@ -16,11 +15,10 @@ main(int argc, char *argv[])
     int a = argc;
     while((argc--)>0 && j<a){
     type = getop(argv[j++]);
-    printf("%c\n",type);
         switch (type)
         {
         case NUMBER:
-            push(atof(argv[j]));
+            push(atof(argv[j-1]));
             break;
         case '+':
             push(pop() + pop());
@@ -39,14 +37,13 @@ main(int argc, char *argv[])
             else
                 printf("error:zero divisor\n");
             break;
-        case '\n':
-            printf("\t%.8g\n", pop());
-            break;
         default:
             printf("error:unknown command %s\n", s);
+            argc=1;
             break;
         }
     }
+    printf("\t%.8g\n",pop());
     return 0;
 }
 #define MAXVAL 100
@@ -74,7 +71,7 @@ double pop(void)
 
 int getop(char s[])
 {
-    if (*s!= '-' && (*s> '9' || *s < '0'))
+    if (*s> '9' || *s < '0')
         return *s;
     else
         return NUMBER;

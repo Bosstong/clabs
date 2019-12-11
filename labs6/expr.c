@@ -75,4 +75,5 @@ int getop(char s[])
         return *s;
     else
         return NUMBER;
+        
 }

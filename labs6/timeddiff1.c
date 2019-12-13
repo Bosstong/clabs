@@ -31,4 +31,5 @@ int main(int argc,char *argv[])
     else if(atof(argv[1]) == atof(argv[4]))
         day += day_of_year(atof(argv[4]),atof(argv[5]),atof(argv[6])) - day_of_year(atof(argv[1]),atof(argv[2]),atof(argv[3])) + 1;
     printf("%d\n",day);
+    return 0;
 }

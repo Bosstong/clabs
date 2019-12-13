@@ -3,7 +3,7 @@ int main()
 {
     printf("Please input any alphanumeric length not exceeding 50 characters：\n");
     char m[50];
-    int count=0,n=0,i;
+    int count=0,n=0,i=0;
     while((m[i]=getchar())!='\n')
         if(m[i]==' ')
             n=0;

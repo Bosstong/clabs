@@ -13,7 +13,7 @@ void ungetch(int c)
     else
         buf[bufp--] = c;
 }
-float getfloat(float *pn){
+char getfloat(float *pn){
     int c,sign;
     float i;
     while(isspace(c=getch()))
@@ -47,7 +47,7 @@ int n = 0;
 float sum = 0;
 for(int i = 0;i<100;i++){
     getfloat(&a[i]);
-    if(a[i]!=0){
+    if(a[i]!='\n'){
         n++;
         sum +=a[i];
     }

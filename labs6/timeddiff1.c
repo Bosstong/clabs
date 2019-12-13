@@ -23,10 +23,10 @@ void month_day(int year,int yearday,int *pmonth,int *pday)
 }
 int main(int argc,char *argv[])
 {
-    int day;
-    for(int i = atof(argv[1]) + 1;i<atof(argv[4]);i++)
-        day += day_of_year(i,12,31);
-    if(*argv[1] < atof(argv[4]))
+    int day=0;
+    for(int i = atof(argv[1])+1;i<atof(argv[4]);i++){
+        day += day_of_year(i,12,31);}
+    if(atof(argv[1]) < atof(argv[4]))
         day += day_of_year(atof(argv[4]),atof(argv[5]),atof(argv[6])) + day_of_year(atof(argv[1]),12,31) - day_of_year(atof(argv[1]),atof(argv[2]),atof(argv[3])) + 1;
     else if(atof(argv[1]) == atof(argv[4]))
         day += day_of_year(atof(argv[4]),atof(argv[5]),atof(argv[6])) - day_of_year(atof(argv[1]),atof(argv[2]),atof(argv[3])) + 1;

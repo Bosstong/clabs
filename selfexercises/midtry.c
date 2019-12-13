@@ -33,8 +33,6 @@ temp=a[j];
 a[j]=a[j+1];
 a[j+1]=temp;}
 }
-printf("The max is：");
-printf("%d ",a[9]);
-printf("\n");
+printf("The max is：%d\n",a[9]);
 return 0;
 }

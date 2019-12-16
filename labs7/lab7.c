@@ -10,13 +10,13 @@ int main(int argc,char*argv[]){
     for(i=1;i<argc;i++,j++){
         a[j]=atof(argv[i]);
     }
-    for(x=0;x<argc-2-y;x++){
-     if(a[x]>a[x+1]) 
+    for(x=0;x<argc-2;x++){
+     if(a[x]<a[x+1]) 
 {
 temp=a[x];
 a[x]=a[x+1];
 a[x+1]=temp;}
 }
-printf("The max is：%d\n",a[argc-2]);
+printf("The min is：%d\n",a[argc-2]);
 return 0;
 }

@@ -5,7 +5,6 @@ int main(int argc,char*argv[]){
     int i =1;
     int j = 0;
     int x=0;
-    int y = 0;
     double temp;
     for(i=1;i<argc;i++,j++){
         a[j]=atof(argv[i]);
